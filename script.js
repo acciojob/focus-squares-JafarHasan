@@ -7,7 +7,7 @@ squares.forEach((square)=>{
 })
 
 
-function handleMouseOver() {
+function handleMouseOver(event) {
 	squares.forEach((square)=>{
 		if(square!=event.target){
 			square.style.backgroundColor="#6F4E37";
@@ -16,7 +16,7 @@ function handleMouseOver() {
 	
 }
 
-function handleMouseOut() {
+function handleMouseOut(event) {
 	squares.forEach((square)=>{
 		if(square!=event.target){
 			square.style.backgroundColor="#E6E6FA";
