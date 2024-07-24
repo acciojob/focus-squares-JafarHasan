@@ -1,7 +1,11 @@
 //your JS code here. If required.
 const squares=document.querySelectorAll('.square');
-squares.addEventListener('mouseover',handleMouseOver);
-squares.addEventListener('mouseout',handleMouseOut);
+
+squares.forEach((square)=>{
+	square.addEventListener('mouseover',handleMouseOver);
+	square.addEventListener('mouseout',handleMouseOut);
+})
+
 
 function handleMouseOver() {
 	squares.forEach((square)=>{
@@ -13,6 +17,10 @@ function handleMouseOver() {
 }
 
 function handleMouseOut() {
-	
+	squares.forEach((square)=>{
+		if(square!=event.target){
+			square.style.backgroundColor="#E6E6FA";
+		}
+	})
 	
 }
